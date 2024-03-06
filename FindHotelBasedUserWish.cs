@@ -18,7 +18,7 @@ namespace AddressBook
         public int reward_w { get; set; }
 
         //Add the Hotel Details
-        public void addHotel()
+        public void AddHotel()
         {
             HotelReservation h = new HotelReservation();
             Console.WriteLine("enter the hotel name");
@@ -49,7 +49,7 @@ namespace AddressBook
 
 
         //Display the hotel details
-        public void hotelDetails()
+        public void HotelDetails()
         {
             Console.WriteLine("Available Hotels and the amount for the customers");
             foreach (HotelReservation h in listobj)
@@ -77,7 +77,7 @@ namespace AddressBook
 
 
         //Finding cheapest hotel
-        public void findingCheapHotel()
+        public void FindingCheapHotel()
         {
             Dictionary<string, int> sumd = new Dictionary<string, int>();
             Dictionary<string, int> rated = new Dictionary<string, int>();
@@ -104,7 +104,7 @@ namespace AddressBook
                     int sum = 0;
                     for (DateTime date = f_date; date < t_date; date = date.AddDays(1))
                     {
-                        //
+                        
                         //Console.WriteLine(date.DayOfWeek);
                         if (date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday)
                         {
@@ -284,13 +284,13 @@ namespace AddressBook
             switch (choice)
             {
                 case 1:
-                    obj.addHotel();
+                    obj.AddHotel();
                     break;
                 case 2:
-                    obj.hotelDetails();
+                    obj.HotelDetails();
                     break;
                 case 3:
-                    obj.findingCheapHotel();
+                    obj.FindingCheapHotel();
                     break;
                 default:
                     Console.WriteLine("invalid choice");
